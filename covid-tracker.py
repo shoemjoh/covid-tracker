@@ -1,7 +1,6 @@
 import requests
 import os
 import json
-import statistics
 
 
 ## product_url = "https://raw.githubusercontent.com/prof-rossetti/intro-to-python/master/data/products/2.json"
@@ -39,5 +38,6 @@ headers = {
 }
 
 response = requests.request("GET", url, headers=headers)
-
-print(response.text)
+parsed_response = json.loads(response.text)
+print(type(response.text))
+print(type(parsed_response))
