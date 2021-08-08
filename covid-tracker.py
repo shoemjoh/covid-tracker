@@ -18,5 +18,13 @@ response = requests.request("GET", url, headers=headers)
 parsed_response = json.loads(response.text)
 
 
-print(type(response.text))
-print(type(parsed_response))
+# print(response.text)
+# print(parsed_response)
+
+home_country = input("Please enter your home country: ")
+
+for x in parsed_response:
+    if x["Country_text"] == home_country:
+        print(
+            f"The total case count {home_country} is: ", x["Total Cases_text"])
+        break
