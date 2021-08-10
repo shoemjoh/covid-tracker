@@ -1,2 +1,5 @@
 requests
 python-dotenv
+sendgrid
+
+# pytest to have the tests run
