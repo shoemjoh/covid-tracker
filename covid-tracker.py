@@ -28,3 +28,14 @@ for x in parsed_response:
         print(
             f"The total case count {home_country} is: ", x["Total Cases_text"])
         break
+
+
+# def set_geography():
+#    if APP_ENV == "development":
+#        user_country = input("PLEASE INPUT A COUNTRY CODE (e.g. 'US'): ")
+#        user_zip = input("PLEASE INPUT A ZIP CODE (e.g. 20057): ")
+#    else:
+#        user_country = COUNTRY_CODE
+#        user_zip = ZIP_CODE
+#    return user_country, user_zip
+#
