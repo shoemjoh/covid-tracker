@@ -2,26 +2,13 @@ import requests
 import os
 import json
 
-
+from email_service import send_email
 from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("api_k")
 HOME_C = os.getenv("home_country")
 APP_ENV = os.getenv("APP_ENV", default="development")
-
-# # Retrieving from COVID API Tracker:
-#
-# url = "https://covid-19-tracking.p.rapidapi.com/v1"
-# headers = {
-#     'x-rapidapi-key': api_key,
-#     'x-rapidapi-host': "covid-19-tracking.p.rapidapi.com"
-# }
-# response = requests.request("GET", url, headers=headers)
-# parsed_response = json.loads(response.text)
-# print(type(parsed_response))
-
-# Defining which country to pull data for based on user input or default setting.
 
 
 def set_country():
@@ -38,7 +25,6 @@ country_chosen = set_country()
 
 
 def get_cases(country_id):
-    # country_cases = 100
     url = "https://covid-19-tracking.p.rapidapi.com/v1"
     headers = {
         'x-rapidapi-key': API_KEY,
@@ -67,3 +53,9 @@ if __name__ == "__main__":
         exit()
 
     print(f"The total COVID-19 case count for {country_chosen} is: ", result)
+
+    # Send and email with the results.
+    html = ""
+    html += f"As of this morning, the total COVID-19 case count for {country_chosen} is: {result}"
+
+    send_email(subject="Daily Covid Briefing", html=html)

@@ -15,6 +15,6 @@ python covid-tracker.py
 SENDGRID_API_KEY = ""
 
 # in production mode:
-APP_ENV="production" COUNTRY_CODE="US" ZIP_CODE="20057" python -m app.weather_service
+APP_ENV="production" COUNTRY_CODE="INDIA" python covid-tracker.py
 
 # Make sure the settings are configured properly in sendgrid, single sender.
