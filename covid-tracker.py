@@ -15,6 +15,7 @@ def set_country():
     if APP_ENV == "development":
         user_country = input("PLEASE INPUT A COUNTRY CODE (e.g. 'USA'): ")
     else:
+        print("Other mode")
         user_country = HOME_C
     return user_country
 

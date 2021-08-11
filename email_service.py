@@ -33,27 +33,27 @@ def send_email(subject="Daily Covid Update", html="<p>Hello World</p>", recipien
         return None
 
 
-if __name__ == "__main__":
-    example_subject = "[Daily Briefing] This is a test"
-
-    example_html = f"""
-   <h3>This is a test of the Daily Briefing Service</h3>
-   <h4>Today's Date</h4>
-   <p>Monday, January 1, 2040</p>
-   <h4>My Stocks</h4>
-   <ul>
-       <li>MSFT | +3%</li>
-       <li>GOOG | +2%</li>
-       <li>AAPL | +4%</li>
-   </ul>
-   <h4>My Forecast</h4>
-   <ul>
-       <li>10:00 AM | 65 DEGREES | CLEAR SKIES</li>
-       <li>01:00 PM | 70 DEGREES | CLEAR SKIES</li>
-       <li>04:00 PM | 75 DEGREES | CLEAR SKIES</li>
-       <li>07:00 PM | 67 DEGREES | PARTLY CLOUDY</li>
-       <li>10:00 PM | 56 DEGREES | CLEAR SKIES</li>
-   </ul>
-   """
-
-    send_email(example_subject, example_html)
+# if __name__ == "__main__":
+#    example_subject = "[Daily Briefing] This is a test"
+#
+#    example_html = f"""
+#   <h3>This is a test of the Daily Briefing Service</h3>
+#   <h4>Today's Date</h4>
+#   <p>Monday, January 1, 2040</p>
+#   <h4>My Stocks</h4>
+#   <ul>
+#       <li>MSFT | +3%</li>
+#       <li>GOOG | +2%</li>
+#       <li>AAPL | +4%</li>
+#   </ul>
+#   <h4>My Forecast</h4>
+#   <ul>
+#       <li>10:00 AM | 65 DEGREES | CLEAR SKIES</li>
+#       <li>01:00 PM | 70 DEGREES | CLEAR SKIES</li>
+#       <li>04:00 PM | 75 DEGREES | CLEAR SKIES</li>
+#       <li>07:00 PM | 67 DEGREES | PARTLY CLOUDY</li>
+#       <li>10:00 PM | 56 DEGREES | CLEAR SKIES</li>
+#   </ul>
+#   """
+#
+#    send_email(example_subject, example_html)
