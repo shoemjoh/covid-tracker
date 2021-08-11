@@ -9,3 +9,12 @@ pip install -r requirements.txt
 
 # To run the program, use this command from the terminal:
 python covid-tracker.py
+
+# Set up some environment variables
+# 1 - A sendgrid api key and sender email address:
+SENDGRID_API_KEY = ""
+
+# in production mode:
+APP_ENV="production" COUNTRY_CODE="US" ZIP_CODE="20057" python -m app.weather_service
+
+# Make sure the settings are configured properly in sendgrid, single sender.
