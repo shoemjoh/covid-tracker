@@ -16,8 +16,8 @@ def send_email(subject="Daily Covid Update", html="<p>Hello World</p>", recipien
     """
     client = SendGridAPIClient(
         SENDGRID_API_KEY)  # > <class 'sendgrid.sendgrid.SendGridAPIClient>
-    print("CLIENT:", type(client))
-    print("SUBJECT:", subject)
+    #print("CLIENT:", type(client))
+    #print("SUBJECT:", subject)
     #print("HTML:", html)
 
     message = Mail(from_email=SENDER_EMAIL_ADDRESS,
@@ -25,7 +25,7 @@ def send_email(subject="Daily Covid Update", html="<p>Hello World</p>", recipien
     try:
         response = client.send(message)
         # > <class 'python_http_client.client.Response'>
-        print("RESPONSE:", type(response))
+        #print("RESPONSE:", type(response))
         print(response.status_code)  # > 202 indicates SUCCESS
         return response
     except Exception as e:
