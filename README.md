@@ -14,9 +14,10 @@ pip install -r requirements.txt
 ```
 python covid_tracker.py
 ```
-# Environment variables stored on the Heroku server. Run with the following command:
+# Environment variables stored on the Heroku server, update home country of interest. Run with the following command:
 ```
 heroku run bash
+python covid_tracker.py
 ```
 # To run in production mode and specific a particular country:
 ```
