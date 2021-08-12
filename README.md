@@ -17,4 +17,8 @@ SENDGRID_API_KEY = ""
 # in production mode:
 APP_ENV="production" COUNTRY_CODE="INDIA" python covid-tracker.py
 
-# Make sure the settings are configured properly in sendgrid, single sender.
+
+# Visualize this covid information on a web application by running:
+FLASK_APP=web_app flask run
+# And then searching for the following url:
+http://localhost:5000/hello
