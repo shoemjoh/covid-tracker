@@ -11,19 +11,7 @@ HOME_C = os.getenv("home_country")
 APP_ENV = os.getenv("APP_ENV", default="development")
 
 
-def set_country():
-    if APP_ENV == "development":
-        user_country = input("PLEASE INPUT A COUNTRY CODE (e.g. 'USA'): ")
-    else:
-        print("Other mode")
-        user_country = HOME_C
-    return user_country
-
 # Finding the total number of cases, updated daily, for the specified country.
-
-
-country_chosen = set_country()
-
 
 def get_cases(country_id):
     url = "https://covid-19-tracking.p.rapidapi.com/v1"
@@ -33,13 +21,24 @@ def get_cases(country_id):
     }
     response = requests.request("GET", url, headers=headers)
     parsed_response = json.loads(response.text)
-
     for x in parsed_response:
         if x["Country_text"] == country_id:
             country_cases = x["Total Cases_text"]
             return country_cases
     return print("No country match found.")
 
+
+if __name__ == "__main__":
+
+    def set_country():
+        if APP_ENV == "development":
+            user_country = input("PLEASE INPUT A COUNTRY CODE (e.g. 'USA'): ")
+        else:
+            print("Other mode")
+            user_country = HOME_C
+        return user_country
+
+    country_chosen = set_country()
 
 if __name__ == "__main__":
     print(

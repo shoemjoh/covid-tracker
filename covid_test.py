@@ -1,2 +1,5 @@
-def test_covid_formatting():
-    assert get_cases("India") == "37,021,829"
+from covid_tracker import get_cases
+
+
+def test_get_cases():
+    assert get_cases(country_id="USA") == "37,021,829"

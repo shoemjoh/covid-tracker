@@ -3,5 +3,4 @@ python-dotenv
 sendgrid
 
 Flask
-
-# pytest to have the tests run
+pytest
